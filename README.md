@@ -25,19 +25,21 @@ pip install pillow
 Das Skript wird über die Kommandozeile ausgeführt:
 
 ```bash
-python wio.py <input_folder> <output_folder>
+python wio.py <input_folder> <output_folder> <logo-file.png>
 ```
 
 Beispiel:
 
 ```bash
-python wio.py ./input ./output
+python wio.py ./input ./output ./logo.png
 ```
 
 - `<input_folder>`: Ordner mit den Originalbildern
 - `<output_folder>`: Ordner, in den optimierte Bilder gespeichert werden
+- `<logo-file.png>`: Logo, welches in das Bild eingearbeitet wird (Postion wird in der Confi.ini gesetzt)
 
 ## Konfiguration (`config.ini`)
+
 
 WIO verwendet eine `config.ini`, um Einstellungen anzupassen:
 
@@ -51,6 +53,8 @@ format = "webp"  # Ausgabeformat: jpg, png oder webp
 quality = 80  # Qualitätsstufe (1-100)
 max_width = 1920  # Maximale Breite (0 = keine Änderung)
 max_height = 1080  # Maximale Höhe (0 = keine Änderung)
+# Position des Logos im Bild (top-left, top-right, bottom-left, bottom-right)
+logo_position = bottom-right
 ```
 
 ## Unterstützte Formate
